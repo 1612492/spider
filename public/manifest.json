@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Spider Wallet",
+  "short_name": "Spider",
+  "version": "0.0.1",
+  "description": "Decentralized wallet for cross-chain",
+  "action": {
+    "default_popup": "src/pages/popup/index.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": ["storage", "tabs"]
+}
