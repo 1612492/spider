@@ -1,4 +1,7 @@
 dist
 node_modules
 public
+commitlint.config.js
+lint-staged.config.js
+postcss.config.js
 prettier.config.js

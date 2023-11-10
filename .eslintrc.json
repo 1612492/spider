@@ -4,17 +4,16 @@
     "browser": true,
     "es2021": true
   },
-  "globals": {
-    "__dirname": true,
-    "module": "readonly",
-    "require": "readonly"
-  },
   "settings": {
     "react": {
       "version": "detect"
     },
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": true,
+      "node": true
     }
   },
   "extends": [
@@ -51,7 +50,6 @@
           }
         ],
         "pathGroupsExcludedImportTypes": ["internal"],
-        "newlines-between": "always",
         "alphabetize": {
           "order": "asc",
           "caseInsensitive": false
