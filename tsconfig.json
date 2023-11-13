@@ -1,10 +1,4 @@
 {
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS",
-      "target": "ESNext"
-    }
-  },
   "compilerOptions": {
     "baseUrl": ".",
     "target": "ESNext",
@@ -13,7 +7,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "types": ["vite/client", "node"],
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "paths": {

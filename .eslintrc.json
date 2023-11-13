@@ -1,13 +1,5 @@
 {
-  "root": true,
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
   "settings": {
-    "react": {
-      "version": "detect"
-    },
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
     },
@@ -18,26 +10,30 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended",
+    "plugin:svelte/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
     "ecmaVersion": "latest",
     "sourceType": "module",
     "tsconfigRootDir": ".",
-    "project": ["./tsconfig.json"]
+    "project": ["./tsconfig.json"],
+    "extraFileExtensions": [".svelte"]
   },
-  "plugins": ["react", "import", "@typescript-eslint"],
+  "plugins": ["import", "@typescript-eslint"],
+  "overrides": [
+    {
+      "files": ["*.svelte"],
+      "parser": "svelte-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser"
+      }
+    }
+  ],
   "rules": {
-    "react/react-in-jsx-scope": "off",
     "import/order": [
       "error",
       {

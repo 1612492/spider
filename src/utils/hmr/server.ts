@@ -1,8 +1,9 @@
 import { watch } from 'chokidar';
 import { WebSocket, WebSocketServer } from 'ws';
-import { Message, MessageType, WS_PORT, WS_URL } from './common';
+// https://github.com/TypeStrong/ts-node/issues/1833
+import { Message, MessageType, WS_PORT, WS_URL } from './common.js';
 
-const map = new Set();
+const map = new Set<WebSocket>();
 
 function debounce<A extends unknown[]>(callback: (...args: A) => void, delay: number) {
   let timer: NodeJS.Timeout;
@@ -35,16 +36,16 @@ function startServer() {
 
 watch('src').on('all', (_, path) =>
   debounce(() => {
-    map.forEach((ws: WebSocket) => ws.send(JSON.stringify({ type: MessageType.Waiting, path })));
-  }, 400)()
+    map.forEach((ws) => ws.send(JSON.stringify({ type: MessageType.Waiting, path })));
+  }, 100)()
 );
 
 watch('dist').on('all', (event) => {
   if (event !== 'add' && event !== 'addDir') return;
 
   debounce(() => {
-    map.forEach((ws: WebSocket) => ws.send(JSON.stringify({ type: MessageType.Updating })));
-  }, 100)();
+    map.forEach((ws) => ws.send(JSON.stringify({ type: MessageType.Updating })));
+  }, 400)();
 });
 
 startServer();

@@ -1,6 +1,6 @@
 import { Message, MessageType, WS_URL } from './common';
 
-export function watcher(path: string): WebSocket {
+export function watcher(path: string) {
   if (import.meta.env.MODE !== 'development') return;
 
   let needToUpdate = false;
@@ -21,7 +21,7 @@ export function watcher(path: string): WebSocket {
         return;
       }
       case MessageType.Waiting: {
-        if (!needToUpdate) {
+        if (!needToUpdate && message.path) {
           needToUpdate = message.path.includes(path);
         }
 
@@ -29,6 +29,4 @@ export function watcher(path: string): WebSocket {
       }
     }
   });
-
-  return socket;
 }
