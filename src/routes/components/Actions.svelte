@@ -9,7 +9,7 @@
     { name: 'Buy', Icon: BuyIcon },
     { name: 'Swap', Icon: SwapIcon },
     { name: 'Bridge', Icon: BridegIcon },
-    { name: 'Send', Icon: SendIcon },
+    { name: 'Send', Icon: SendIcon }
   ];
 </script>
 
