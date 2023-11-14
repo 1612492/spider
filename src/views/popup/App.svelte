@@ -1,11 +1,11 @@
 <script lang="ts">
-  import Actions from './components/actions.svelte';
-  import Balance from './components/balance.svelte';
-  import Header from './components/header.svelte';
-  import Nfts from './components/nfts.svelte';
-  import Tabs from './components/tabs.svelte';
-  import Tokens from './components/tokens.svelte';
-  import Transactions from './components/transactions.svelte';
+  import Actions from './components/Actions.svelte';
+  import Balance from './components/Balance.svelte';
+  import Header from './components/Header.svelte';
+  import NFTs from './components/NFTs.svelte';
+  import Tabs from './components/Tabs.svelte';
+  import Tokens from './components/Tokens.svelte';
+  import Transactions from './components/Transactions.svelte';
 
   $: currentTab = 0;
 </script>
@@ -18,7 +18,7 @@
   {#if currentTab === 0}
     <Tokens />
   {:else if currentTab === 1}
-    <Nfts />
+    <NFTs />
   {:else}
     <Transactions />
   {/if}

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Transaction from './transaction.svelte';
+  import Transaction from './Transaction.svelte';
 </script>
 
 <div class="max-h-[296px] space-y-2 overflow-y-auto p-2">

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Chevron from '@/components/icons/chevron.svelte';
-  import ScanIcon from '@/components/icons/scan.svelte';
+  import Chevron from '@/components/icons/ChevronIcon.svelte';
+  import ScanIcon from '@/components/icons/ScanIcon.svelte';
 </script>
 
 <header class="flex justify-between border-b p-2">

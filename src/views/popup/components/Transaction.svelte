@@ -1,7 +1,7 @@
 <script lang="ts">
   import tokenImg from '@/assets/token.webp';
-  import SendIcon from '@/components/icons/send.svelte';
-  import ReceiveIcon from '@/components/icons/receive.svelte';
+  import SendIcon from '@/components/icons/SendIcon.svelte';
+  import ReceiveIcon from '@/components/icons/ReceiveIcon.svelte';
 
   export let type: number;
   let balance = 2000;

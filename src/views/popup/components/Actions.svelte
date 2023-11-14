@@ -1,9 +1,9 @@
 <script lang="ts">
-  import BridegIcon from '@/components/icons/bridge.svelte';
-  import BuyIcon from '@/components/icons/buy.svelte';
-  import SendIcon from '@/components/icons/send.svelte';
-  import SwapIcon from '@/components/icons/swap.svelte';
-  import Action from './action.svelte';
+  import BridegIcon from '@/components/icons/BridgeIcon.svelte';
+  import BuyIcon from '@/components/icons/BuyIcon.svelte';
+  import SendIcon from '@/components/icons/SendIcon.svelte';
+  import SwapIcon from '@/components/icons/SwapIcon.svelte';
+  import Action from './Action.svelte';
 
   let actions = [
     { name: 'Buy', Icon: BuyIcon },

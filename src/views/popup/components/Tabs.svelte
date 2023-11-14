@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Tab from './tab.svelte';
+  import Tab from './Tab.svelte';
 
   export let currentTab: number;
   export let changeTab: (tab: number) => void;
