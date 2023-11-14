@@ -5,7 +5,10 @@ import { Message, MessageType, WS_PORT, WS_URL } from './common.js';
 
 const map = new Set<WebSocket>();
 
-function debounce<A extends unknown[]>(callback: (...args: A) => void, delay: number) {
+function debounce<A extends unknown[]>(
+  callback: (...args: A) => void,
+  delay: number
+) {
   let timer: NodeJS.Timeout;
 
   return function (...args: A) {
@@ -17,7 +20,9 @@ function debounce<A extends unknown[]>(callback: (...args: A) => void, delay: nu
 function startServer() {
   const wss = new WebSocketServer({ port: WS_PORT });
 
-  wss.on('listening', () => console.log(`[HMR] Server is listening on ${WS_URL}`));
+  wss.on('listening', () =>
+    console.log(`[HMR] Server is listening on ${WS_URL}`)
+  );
 
   wss.on('connection', (ws) => {
     map.add(ws);
@@ -36,7 +41,9 @@ function startServer() {
 
 watch('src').on('all', (_, path) =>
   debounce(() => {
-    map.forEach((ws) => ws.send(JSON.stringify({ type: MessageType.Waiting, path })));
+    map.forEach((ws) =>
+      ws.send(JSON.stringify({ type: MessageType.Waiting, path }))
+    );
   }, 100)()
 );
 
@@ -44,7 +51,9 @@ watch('dist').on('all', (event) => {
   if (event !== 'add' && event !== 'addDir') return;
 
   debounce(() => {
-    map.forEach((ws) => ws.send(JSON.stringify({ type: MessageType.Updating })));
+    map.forEach((ws) =>
+      ws.send(JSON.stringify({ type: MessageType.Updating }))
+    );
   }, 400)();
 });
 

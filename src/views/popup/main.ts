@@ -2,7 +2,7 @@ import '@/global.css';
 import { watcher } from '@/utils/hmr/client';
 import App from './App.svelte';
 
-watcher('pages/popup');
+watcher('views/popup');
 
 const app = new App({
   target: document.getElementById('app'),

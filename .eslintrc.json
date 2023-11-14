@@ -37,7 +37,12 @@
     "import/order": [
       "error",
       {
-        "groups": [["external", "builtin"], "internal", ["sibling", "parent"], "index"],
+        "groups": [
+          ["external", "builtin"],
+          "internal",
+          ["sibling", "parent"],
+          "index"
+        ],
         "pathGroups": [
           {
             "pattern": "(react|react-dom)",

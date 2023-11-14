@@ -8,10 +8,10 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        popup: path.resolve(__dirname, 'src', 'pages', 'popup', 'index.html'),
+        popup: path.resolve(__dirname, 'src', 'views', 'popup', 'index.html'),
       },
       output: {
-        entryFileNames: 'src/pages/[name]/index.js',
+        entryFileNames: 'src/views/[name]/index.js',
         chunkFileNames: 'assets/js/[name].js',
       },
     },
