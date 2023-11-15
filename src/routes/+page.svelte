@@ -10,14 +10,16 @@
   $: currentTab = 0;
 </script>
 
-<Header />
-<Balance />
-<Actions />
-<Tabs {currentTab} changeTab={(tab) => (currentTab = tab)} />
-{#if currentTab === 0}
-  <Tokens />
-{:else if currentTab === 1}
-  <NFTs />
-{:else}
-  <Transactions />
-{/if}
+<main class="border-2 border-primary bg-primary text-primary">
+  <Header />
+  <Balance />
+  <Actions />
+  <Tabs {currentTab} changeTab={(tab) => (currentTab = tab)} />
+  {#if currentTab === 0}
+    <Tokens />
+  {:else if currentTab === 1}
+    <NFTs />
+  {:else}
+    <Transactions />
+  {/if}
+</main>

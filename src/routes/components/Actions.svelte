@@ -9,7 +9,7 @@
   ];
 </script>
 
-<div class="flex justify-between gap-x-2 px-2 pb-4 pt-2">
+<div class="flex justify-between gap-x-4 px-2 pb-4">
   {#each actions as { name, Icon }}
     <Action {name}><Icon class="h-4 w-4" /></Action>
   {/each}

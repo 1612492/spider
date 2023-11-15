@@ -8,8 +8,8 @@
 
 <button
   class={clsx(
-    'rounded-t p-2 text-sm hover:bg-gray-100',
-    active && 'border-b-2 border-blue-600 text-blue-600'
+    'flex flex-1 items-center justify-center rounded-t-lg py-2 text-sm font-semibold hover:bg-secondary',
+    active && 'bg-highlight text-secondary hover:bg-highlight'
   )}
   on:click={onClick}>{name}</button
 >

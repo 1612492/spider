@@ -3,4 +3,8 @@
   export let imgUrl: string;
 </script>
 
-<img src={imgUrl} class="w-full" alt={name} />
+<img
+  src={imgUrl}
+  class="w-full rounded-lg border-2 border-primary"
+  alt={name}
+/>

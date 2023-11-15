@@ -1,16 +1,12 @@
 <script lang="ts">
-  import Chevron from '@/components/icons/ChevronIcon.svelte';
-  import ScanIcon from '@/components/icons/ScanIcon.svelte';
+  import DropdownIcon from '@/components/icons/DropdownIcon.svelte';
 </script>
 
-<header class="flex justify-between border-b p-2">
+<header class="border-b-2 border-primary p-2">
   <button
-    class="flex items-center justify-between gap-x-1 rounded p-1 hover:bg-gray-100"
+    class="flex items-center justify-between gap-x-1 rounded p-1 hover:bg-secondary"
   >
-    <span class="text-sm">Ethereum Mainnet</span>
-    <Chevron class="h-3 w-3 text-black" />
-  </button>
-  <button class="rounded p-1 hover:bg-gray-100">
-    <ScanIcon class="h-5 w-5 text-black" />
+    <span class="text-sm font-semibold">Ethereum Mainnet</span>
+    <DropdownIcon class="text-black h-3 w-3" />
   </button>
 </header>

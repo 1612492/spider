@@ -8,20 +8,20 @@
 </script>
 
 <button
-  class="flex w-full items-center justify-between rounded p-2 text-sm hover:bg-gray-100"
+  class="flex w-full items-center justify-between px-2 py-4 text-sm hover:bg-secondary"
 >
   <div class="flex items-center gap-x-2">
-    <div class="rounded-full bg-blue-600 p-2 text-white">
+    <div class="rounded-full bg-highlight p-2 text-secondary">
       {#if type % 2 === 0}
         <SendIcon class="h-4 w-4" />
       {:else}
         <ReceiveIcon class="h-4 w-4" />
       {/if}
     </div>
-    <span>{type === 0 ? 'Send' : 'Receive'}</span>
+    <span class="font-semibold">{type === 0 ? 'Send' : 'Receive'}</span>
   </div>
   <div class="flex items-center gap-x-1">
-    <span>{balance.toLocaleString()}</span>
+    <span class="font-semibold">{balance.toLocaleString()}</span>
     <img src={tokenImg} class="h-6 w-6" alt="token" />
   </div>
 </button>
