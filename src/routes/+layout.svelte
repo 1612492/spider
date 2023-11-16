@@ -1,9 +1,7 @@
 <script lang="ts">
   import '@/app.css';
-  import { onMount } from 'svelte';
-  import { watcher } from '@/utils/hmr/client';
-
-  onMount(() => watcher());
 </script>
 
-<slot />
+<main class="h-[600px] w-[360px] bg-primary text-sm text-primary sm:rounded">
+  <slot />
+</main>

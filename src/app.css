@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  @apply h-1 w-1;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded bg-secondary;
+}
+
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100dvh;
-  font-family: 'Rubik', sans-serif;
+  @apply flex min-h-screen items-center justify-center;
+  font-family: 'Lexend', sans-serif;
 }

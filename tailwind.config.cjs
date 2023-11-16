@@ -2,7 +2,6 @@
 module.exports = {
   content: ['./src/**/*.{svelte,js,ts,jsx,tsx}'],
   theme: {
-    color: {},
     extend: {
       backgroundColor: {
         primary: '#e2e8f0',
@@ -20,6 +19,9 @@ module.exports = {
       },
       borderColor: {
         primary: '#f9fafb'
+      },
+      outlineColor: {
+        primary: '#6246ea'
       }
     }
   },

@@ -1,14 +1,12 @@
 {
   "name": "spider",
   "version": "1.0.0",
-  "description": "Decentralized wallet for cross-chain",
+  "description": "Ethereum wallet",
   "main": "index.js",
   "license": "ISC",
   "type": "module",
   "scripts": {
-    "dev": "concurrently 'pnpm hmr:server' 'pnpm hmr:client'",
-    "hmr:server": "ts-node-esm src/utils/hmr/server.ts",
-    "hmr:client": "vite build --watch --mode=development",
+    "dev": "vite",
     "build": "vite build",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "format": "prettier --ignore-unknown --write .",
@@ -19,19 +17,15 @@
     "@commitlint/config-conventional": "^18.4.0",
     "@sveltejs/kit": "^1.27.6",
     "@types/node": "^20.8.10",
-    "@types/ws": "^8.5.9",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
     "autoprefixer": "^10.4.16",
-    "chokidar": "^3.5.3",
-    "concurrently": "^8.2.2",
     "eslint": "^8.53.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-svelte": "^2.35.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
-    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "prettier-plugin-svelte": "^3.1.0",
@@ -40,10 +34,8 @@
     "svelte-check": "^3.6.0",
     "sveltekit-adapter-chrome-extension": "^2.0.0",
     "tailwindcss": "^3.3.5",
-    "ts-node": "^10.9.1",
     "vite": "^4.5.0",
-    "vite-tsconfig-paths": "^4.2.1",
-    "ws": "^8.14.2"
+    "vite-tsconfig-paths": "^4.2.1"
   },
   "dependencies": {
     "clsx": "^2.0.0"

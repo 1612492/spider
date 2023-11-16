@@ -3,7 +3,7 @@
   "name": "Spider Wallet",
   "short_name": "Spider",
   "version": "0.0.1",
-  "description": "Decentralized wallet for cross-chain",
+  "description": "Ethereum wallet",
   "action": {
     "default_popup": "index.html"
   },
