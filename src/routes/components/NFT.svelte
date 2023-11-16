@@ -3,8 +3,6 @@
   export let imgUrl: string;
 </script>
 
-<img
-  src={imgUrl}
-  class="w-full rounded-lg border-2 border-primary"
-  alt={name}
-/>
+<button class="w-full rounded-lg">
+  <img src={imgUrl} alt={name} />
+</button>

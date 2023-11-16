@@ -3,7 +3,7 @@
   import NFT from './NFT.svelte';
 </script>
 
-<div class="grid max-h-[296px] grid-cols-2 gap-4 overflow-y-auto p-2">
+<div class="grid max-h-[360px] grid-cols-2 gap-2 overflow-y-auto p-2">
   {#each Array(10).fill(0) as _}
     <NFT name="NFT" imgUrl={nft} />
   {/each}

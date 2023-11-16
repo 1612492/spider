@@ -10,16 +10,24 @@
   $: currentTab = 0;
 </script>
 
-<main class="border-2 border-primary bg-primary text-primary">
+<main class="h-[600px] w-[360px] bg-primary text-primary">
   <Header />
-  <Balance />
-  <Actions />
+  <div class="px-2 py-1">
+    <div class="rounded-lg bg-card">
+      <Balance />
+      <Actions />
+    </div>
+  </div>
   <Tabs {currentTab} changeTab={(tab) => (currentTab = tab)} />
-  {#if currentTab === 0}
-    <Tokens />
-  {:else if currentTab === 1}
-    <NFTs />
-  {:else}
-    <Transactions />
-  {/if}
+  <div class="p-2">
+    <div class="overflow-hidden rounded-lg bg-card">
+      {#if currentTab === 0}
+        <Tokens />
+      {:else if currentTab === 1}
+        <NFTs />
+      {:else}
+        <Transactions />
+      {/if}
+    </div>
+  </div>
 </main>

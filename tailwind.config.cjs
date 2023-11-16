@@ -2,25 +2,24 @@
 module.exports = {
   content: ['./src/**/*.{svelte,js,ts,jsx,tsx}'],
   theme: {
-    colors: {},
+    color: {},
     extend: {
       backgroundColor: {
-        primary: '#fffffe',
-        secondary: '#d1d1e9',
-        tertiary: '#e45858',
-        highlight: '#6246ea'
+        primary: '#e2e8f0',
+        secondary: '#d1d5db',
+        card: '#fff',
+        btn: {
+          primary: '#6246ea'
+        }
       },
       textColor: {
         primary: '#2b2c34',
-        secondary: '#fffffe',
-        tertiary: '#e45858',
-        highlight: '#6246ea'
+        btn: {
+          primary: '#fff'
+        }
       },
       borderColor: {
-        primary: '#2b2c34',
-        secondary: '#d1d1e9',
-        tertiary: '#e45858',
-        highlight: '#6246ea'
+        primary: '#f9fafb'
       }
     }
   },

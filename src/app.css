@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 body {
-  width: 320px;
-  height: 480px;
-  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  font-family: 'Rubik', sans-serif;
 }
