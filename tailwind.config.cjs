@@ -4,11 +4,12 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        primary: '#e2e8f0',
+        primary: '#f1f5f9',
         secondary: '#d1d5db',
         card: '#fff',
         btn: {
-          primary: '#6246ea'
+          primary: '#6246ea',
+          default: '#cbd5e1'
         }
       },
       textColor: {
@@ -18,7 +19,9 @@ module.exports = {
         }
       },
       borderColor: {
-        primary: '#f9fafb'
+        primary: '#6246ea',
+        default: '#f9fafb',
+        black: '#000'
       },
       outlineColor: {
         primary: '#6246ea'

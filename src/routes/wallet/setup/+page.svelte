@@ -8,24 +8,20 @@
   <p class="mt-2 text-center">
     You can create a new wallet or connect any existing one.
   </p>
-  <div class="mt-4 flex gap-x-4">
+  <div class="mt-8 space-y-4">
     <a
       href="/wallet/create"
-      class="flex flex-1 items-center justify-center gap-x-2 rounded-lg bg-card p-4 transition-transform hover:scale-105"
+      class="flex items-center gap-x-4 rounded-lg bg-card p-4 hover:bg-btn-primary hover:text-btn-primary"
     >
-      <div class="rounded-xl bg-blue-500 p-3 text-white">
-        <WalletIcon class="h-6 w-6" />
-      </div>
-      <div>Create wallet</div>
+      <WalletIcon class="h-6 w-6" />
+      <div>Create a new wallet</div>
     </a>
     <a
       href="/wallet/import"
-      class="flex flex-1 items-center justify-center gap-x-2 rounded-lg bg-card p-4 transition-transform hover:scale-105"
+      class="flex items-center gap-x-4 rounded-lg bg-card p-4 hover:bg-btn-primary hover:text-btn-primary"
     >
-      <div class="rounded-xl bg-green-500 p-3 text-white">
-        <ImportIcon class="h-6 w-6" />
-      </div>
-      <div>Import wallet</div>
+      <ImportIcon class="h-6 w-6" />
+      <div>Import an existing wallet</div>
     </a>
   </div>
 </div>

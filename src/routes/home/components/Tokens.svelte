@@ -3,7 +3,7 @@
   import Token from './Token.svelte';
 </script>
 
-<div class="max-h-[350px] divide-y divide-primary overflow-y-auto">
+<div class="max-h-[350px] divide-y divide-default overflow-y-auto">
   {#each Array(10).fill(0) as _}
     <Token name="Tether USD" symbol="USDT" imgUrl={tokenImg} />
   {/each}

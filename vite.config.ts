@@ -1,7 +1,10 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  plugins: [sveltekit(), tsconfigPaths()]
+  plugins: [sveltekit(), tsconfigPaths()],
+  server: {
+    port: 3000
+  }
 });

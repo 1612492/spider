@@ -5,7 +5,7 @@
   let balance = 2000;
 </script>
 
-<button class="flex w-full items-center justify-between p-2 hover:bg-secondary">
+<div class="flex h-14 w-full items-center justify-between p-2">
   <div class="flex items-center gap-x-2">
     <img src={imgUrl} class="h-8 w-8" alt={symbol} />
     <div class="text-left">
@@ -14,4 +14,4 @@
     </div>
   </div>
   <div>{balance.toLocaleString()}</div>
-</button>
+</div>

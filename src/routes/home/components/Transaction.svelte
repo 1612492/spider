@@ -7,13 +7,13 @@
   let balance = 2000;
 </script>
 
-<button class="flex w-full items-center justify-between p-2 hover:bg-secondary">
+<div class="flex h-14 w-full items-center justify-between p-2">
   <div class="flex items-center gap-x-2">
-    <div class="rounded-full bg-btn-primary p-2 text-btn-primary">
+    <div class="rounded-full border border-black p-2">
       {#if type % 2 === 0}
-        <SendIcon class="h-5 w-5" />
+        <SendIcon class="h-4 w-4" />
       {:else}
-        <ReceiveIcon class="h-5 w-5" />
+        <ReceiveIcon class="h-4 w-4" />
       {/if}
     </div>
     <span>{type === 0 ? 'Send' : 'Receive'}</span>
@@ -22,4 +22,4 @@
     <span>{balance.toLocaleString()}</span>
     <img src={tokenImg} class="h-6 w-6" alt="token" />
   </div>
-</button>
+</div>
