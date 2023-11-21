@@ -41,8 +41,12 @@
     "vitest": "^0.34.6"
   },
   "dependencies": {
+    "@felte/validator-zod": "^1.0.17",
     "clsx": "^2.0.0",
     "crypto-js": "^4.2.0",
-    "viem": "^1.19.3"
+    "ethers": "^6.8.1",
+    "felte": "^1.2.12",
+    "viem": "^1.19.3",
+    "zod": "^3.22.4"
   }
 }
