@@ -1,5 +1,5 @@
 <script lang="ts">
-  import nft from '@/assets/nft.png';
+  import nft from '@assets/nft.png';
   import NFT from './NFT.svelte';
 </script>
 

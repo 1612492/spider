@@ -1,8 +1,8 @@
 <script lang="ts">
-  import InfoCard from './components/InfoCard.svelte';
   import Header from './components/Header.svelte';
-  import Tabs from './components/Tabs.svelte';
+  import InfoCard from './components/InfoCard.svelte';
   import TabView from './components/TabView.svelte';
+  import Tabs from './components/Tabs.svelte';
 
   $: currentTab = 0;
 </script>

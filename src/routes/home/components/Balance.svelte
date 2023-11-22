@@ -1,5 +1,5 @@
 <script lang="ts">
-  import tokenImg from '@/assets/native-token.webp';
+  import tokenImg from '@assets/native-token.webp';
   let balance = 10000;
   let symbol = 'ETH';
 </script>

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import ReceiveIcon from '@/components/icons/ReceiveIcon.svelte';
-  import SendIcon from '@/components/icons/SendIcon.svelte';
+  import ReceiveIcon from '@components/icons/ReceiveIcon.svelte';
+  import SendIcon from '@components/icons/SendIcon.svelte';
   import Action from './Action.svelte';
 
   let actions = [

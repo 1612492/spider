@@ -1,6 +1,7 @@
 <script lang="ts">
-  import ImportIcon from '@/components/icons/ImportIcon.svelte';
-  import WalletIcon from '@/components/icons/WalletIcon.svelte';
+  import { Link } from 'svelte-routing';
+  import ImportIcon from '@components/icons/ImportIcon.svelte';
+  import WalletIcon from '@components/icons/WalletIcon.svelte';
 </script>
 
 <div class="p-4">
@@ -9,19 +10,19 @@
     You can create a new wallet or connect any existing one.
   </p>
   <div class="mt-8 space-y-4">
-    <a
-      href="/wallet/create"
+    <Link
+      to="/wallet/create"
       class="flex items-center gap-x-4 rounded-lg bg-card p-4 hover:bg-btn-primary hover:text-btn-primary"
     >
       <WalletIcon class="h-6 w-6" />
       <div>Create a new wallet</div>
-    </a>
-    <a
-      href="/wallet/import"
+    </Link>
+    <Link
+      to="/wallet/import"
       class="flex items-center gap-x-4 rounded-lg bg-card p-4 hover:bg-btn-primary hover:text-btn-primary"
     >
       <ImportIcon class="h-6 w-6" />
       <div>Import an existing wallet</div>
-    </a>
+    </Link>
   </div>
 </div>

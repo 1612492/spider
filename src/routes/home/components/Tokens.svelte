@@ -1,5 +1,5 @@
 <script lang="ts">
-  import tokenImg from '@/assets/token.webp';
+  import tokenImg from '@assets/token.webp';
   import Token from './Token.svelte';
 </script>
 

@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { goto } from '$app/navigation';
   import { validator } from '@felte/validator-zod';
   import { createForm } from 'felte';
+  import { navigate } from 'svelte-routing';
   import { z } from 'zod';
 
   const schema = z
@@ -22,7 +22,7 @@
     extend: validator({ schema }),
     onSubmit(values) {
       console.log({ values });
-      goto('/wallet/setup');
+      navigate('/wallet/setup');
     }
   });
 </script>

@@ -1,15 +1,14 @@
 <script lang="ts">
-  import { goto } from '$app/navigation';
   import { validator } from '@felte/validator-zod';
-  import { Mnemonic } from 'ethers';
   import { createForm } from 'felte';
+  import { navigate } from 'svelte-routing';
   import { z } from 'zod';
 
   const schema = z.object({
     seedphrase: z
       .string({ required_error: 'This field is required' })
       .min(1, { message: 'This field is required' })
-      .refine((value) => Mnemonic.isValidMnemonic(value), {
+      .refine((value) => value.split(' ').length === 12, {
         message: 'Invalid seed phrase'
       })
   });
@@ -18,7 +17,7 @@
     extend: validator({ schema }),
     onSubmit(values) {
       console.log({ values });
-      goto('/home');
+      navigate('/');
     }
   });
 </script>

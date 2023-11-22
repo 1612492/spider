@@ -1,6 +1,7 @@
 <script lang="ts">
-  import CheckIcon from '@/components/icons/CheckIcon.svelte';
-  import SpiderIcon from '@/components/icons/SpiderIcon.svelte';
+  import { Link } from 'svelte-routing';
+  import CheckIcon from '@components/icons/CheckIcon.svelte';
+  import SpiderIcon from '@components/icons/SpiderIcon.svelte';
 </script>
 
 <div class="h-full bg-btn-primary p-8 text-center text-white">
@@ -21,9 +22,9 @@
       <span>Support many chains</span>
     </div>
   </div>
-  <a
-    href="/wallet/password"
+  <Link
+    to="/password/create"
     class="mt-8 flex flex-1 items-center justify-center rounded-lg bg-white py-3 text-primary hover:bg-opacity-90"
-    >Use now</a
+    >Use now</Link
   >
 </div>

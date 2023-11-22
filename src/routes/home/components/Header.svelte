@@ -1,5 +1,5 @@
 <script lang="ts">
-  import DropdownIcon from '@/components/icons/DropdownIcon.svelte';
+  import DropdownIcon from '@components/icons/DropdownIcon.svelte';
 </script>
 
 <header class="flex justify-between p-2">

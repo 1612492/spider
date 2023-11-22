@@ -1,5 +1,6 @@
 <script lang="ts">
-  import CheckIcon from '@/components/icons/CheckIcon.svelte';
+  import { Link } from 'svelte-routing';
+  import CheckIcon from '@components/icons/CheckIcon.svelte';
 </script>
 
 <div class="p-4">
@@ -14,9 +15,9 @@
     rows={5}
     class="mt-4 w-full rounded-lg p-4 outline-primary"
   />
-  <a
-    href="/home"
+  <Link
+    to="/"
     class="mt-8 flex flex-1 items-center justify-center rounded-lg bg-btn-primary py-3 text-btn-primary hover:bg-opacity-90"
-    >Continue</a
+    >Continue</Link
   >
 </div>
