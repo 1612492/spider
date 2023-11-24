@@ -17,6 +17,7 @@
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "@sveltejs/vite-plugin-svelte": "^3.0.1",
+    "@types/aes-js": "^3.1.4",
     "@types/chrome": "^0.0.253",
     "@types/crypto-js": "^4.2.1",
     "@typescript-eslint/eslint-plugin": "^6.12.0",
@@ -42,6 +43,8 @@
   },
   "dependencies": {
     "@felte/validator-zod": "^1.0.17",
+    "aes-js": "^3.1.2",
+    "asmcrypto.js": "^2.3.2",
     "clsx": "^2.0.0",
     "crypto-js": "^4.2.0",
     "felte": "^1.2.12",

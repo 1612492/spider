@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { Route, Router, navigate } from 'svelte-routing';
+  import { isOnborading, isValidToken } from '@stores/account';
   import Home from './home/Home.svelte';
   import Login from './login/Login.svelte';
   import PasswordCreate from './password/PasswordCreate.svelte';
@@ -9,7 +10,16 @@
   import WalletSetup from './wallet/WalletSetup.svelte';
   import Welcome from './welcome/Welcome.svelte';
 
-  onMount(() => navigate('/welcome'));
+  onMount(async () => {
+    const onboarding = await isOnborading();
+
+    if (onboarding) {
+      navigate('/welcome');
+    } else {
+      const validToken = await isValidToken();
+      navigate(validToken ? '/' : '/login');
+    }
+  });
 </script>
 
 <Router>

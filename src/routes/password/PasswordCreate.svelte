@@ -3,6 +3,7 @@
   import { createForm } from 'felte';
   import { navigate } from 'svelte-routing';
   import { z } from 'zod';
+  import { createPassword } from '@stores/account';
 
   const schema = z
     .object({
@@ -18,10 +19,10 @@
       path: ['confirmPassword']
     });
 
-  const { form, errors } = createForm({
+  const { form, errors } = createForm<z.infer<typeof schema>>({
     extend: validator({ schema }),
-    onSubmit(values) {
-      console.log({ values });
+    onSubmit: async ({ password }) => {
+      await createPassword(password);
       navigate('/wallet/setup');
     }
   });

@@ -3,6 +3,7 @@
   import { createForm } from 'felte';
   import { navigate } from 'svelte-routing';
   import { z } from 'zod';
+  import { login } from '@stores/account';
 
   const schema = z.object({
     password: z
@@ -10,11 +11,15 @@
       .min(1, { message: 'This field is required' })
   });
 
-  const { form, errors } = createForm({
+  const { form, errors } = createForm<z.infer<typeof schema>>({
     extend: validator({ schema }),
-    onSubmit(values) {
-      console.log({ values });
-      navigate('/');
+    onSubmit: async ({ password }) => {
+      try {
+        await login(password);
+        navigate('/');
+      } catch (error) {
+        console.error(error);
+      }
     }
   });
 </script>
